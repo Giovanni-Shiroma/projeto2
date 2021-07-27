@@ -1,0 +1,24 @@
+.lista {
+    height: 23vh;
+    border: 1px solid black;
+    margin: -9px;
+    padding: 10px;
+    background: linear-gradient(
+        180deg
+        , rgba(57,58,94,1) 0%, rgba(40,42,63,1) 100%);
+    color: #fff;
+    list-style: none;
+}
+
+.botaoPagar {
+    float: right;
+    margin-top: 10vh;
+}
+
+.modal   {
+    width : 90px;
+    height : 90px;
+    margin : 10px;
+    background-color : #f00;
+    }
+    
