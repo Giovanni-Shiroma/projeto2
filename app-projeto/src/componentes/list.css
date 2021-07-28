@@ -12,13 +12,41 @@
 
 .botaoPagar {
     float: right;
-    margin-top: 10vh;
+    margin-top: 9vh;
 }
-
 .modal   {
     width : 90px;
     height : 90px;
     margin : 10px;
     background-color : #f00;
     }
+
+.imgPerfil {
+    position: absolute;
+    border-radius: 90px;
+    margin-top: 2vh;
+}
     
+.nomePerfil {
+    margin-left: 16vh;
+    position: absolute;
+    margin-top: 6vh;
+}
+
+
+.idPerfil {
+    position: absolute;
+    margin-left: 16vh;
+    margin-top: 8vh;
+}
+
+.UserPerfil {
+    position: absolute;
+    margin-left: 24vh;
+    margin-top: 8vh;
+}
+
+li {
+    font-size: 20px;
+    padding: 1%;
+}

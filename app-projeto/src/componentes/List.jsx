@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import './list.css'
-// import modal from "./modal";
 import api from "./modal";
 
-
+// FUNÇÃO PARA PEGAR A API
 class App extends Component{
 
   state= {
@@ -13,11 +12,13 @@ class App extends Component{
   async componentDidMount(){
     const response = await api.get('');
 
-    console.log(response.data)
+    console.log(response.data);
 
     this.setState({ nome: response.data });
   }
 
+
+  // FUNÇÃO PARA RENDERIZAR O CODIGO NA TELA 
   render(){
 
     const { nome } = this.state;
@@ -28,7 +29,7 @@ class App extends Component{
         {nome.map(dados => (
 
           <ul key={nome.id}  className="lista">
-          <li><img src={dados.img}></img> Nome: {dados.name} Id:{dados.id} User:{dados.username}<button className="botaoPagar">Pagar</button></li>
+          <li><img className="imgPerfil" src={dados.img}></img> <span className="nomePerfil"><strong>Nome:</strong> {dados.name}</span>  <span className="idPerfil"><strong>Id:</strong>{dados.id}</span> <span className="UserPerfil"><strong>Username:</strong>{dados.username}</span><button className="botaoPagar">Pagar</button></li>
         </ul>
         ))}
 
