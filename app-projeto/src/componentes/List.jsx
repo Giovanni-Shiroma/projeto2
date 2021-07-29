@@ -1,8 +1,10 @@
 import React, { Component } from "react"
 import './list.css'
-import api from "./modal";
+import api from "./api";
+// import Modal from "./modal";
 
-// FUNÇÃO PARA PEGAR A API
+
+// FUNÇÃO PARA PUXAR A API
 class App extends Component{
 
   state= {
@@ -17,10 +19,20 @@ class App extends Component{
     this.setState({ nome: response.data });
   }
 
+  
+  
+  let mostraModal = (e, i) => {
+    // console.log(e.target.dataset.index)
+    // console.log(i)
 
+    setTarefaSelecionada(Object.assign({}, tarefas[i]))
+    setShowModal(true);
+    
+
+}
   // FUNÇÃO PARA RENDERIZAR O CODIGO NA TELA 
   render(){
-
+    let [showModal, setShowModal] = useState(false)
     const { nome } = this.state;
 
     return(
@@ -29,43 +41,31 @@ class App extends Component{
         {nome.map(dados => (
 
           <ul key={nome.id}  className="lista">
-          <li><img className="imgPerfil" src={dados.img}></img> <span className="nomePerfil"><strong>Nome:</strong> {dados.name}</span>  <span className="idPerfil"><strong>Id:</strong>{dados.id}</span> <span className="UserPerfil"><strong>Username:</strong>{dados.username}</span><button className="botaoPagar">Pagar</button></li>
+           <li>
+             <img className="imgPerfil" src={dados.img}></img>
+              <span className="nomePerfil"><strong>Nome do Usuário: </strong>{dados.name}</span>
+              <span className="idPerfil"><strong>Id:</strong>{dados.id} - </span> 
+              <span className="UserPerfil"><strong>Username: </strong>{dados.username}</span>
+              <button className="botaoPagar" style={{display: (showModal ? 'block' : 'none')}} onClick={() => setShowModal(false)}>Pagar</button>
+            </li>
         </ul>
         ))}
-
-        {/* <li className="lista"><button className="botaoPagar">Pagar</button></li>
-        <li className="lista"><button className="botaoPagar">Pagar</button></li>
-        <li className="lista"><button className="botaoPagar">Pagar</button></li>
-        <li className="lista"><button className="botaoPagar ">Pagar</button></li> */}
+      <div id="modal" className="modal" style={{display: (showModal ? 'block' : 'none' )}}>
+                    <div className="form">
+                        <div></div>
+                        <div>
+                            <select>
+                                <option value="to do"> TO DO </option>
+                                <option value="in progress"> IN PROGRESS </option>
+                                <option value="complete"> COMPLETE </option>
+                            </select>
+                        </div>
+                        <button>Salvar</button>
+                    </div>
+            </div>
        </div> 
        );
       }
     }
     
     export default App
-    
-    // function Lista() {
-      //  fetch(' https://www.mocky.io/v2/5d531c4f2e0000620081ddce')
-      //  .then((response) => response.json()).then((data) => console.log(data))
-      
-      //     return (
-        //       <div>
-        //         <li className="lista"><button className="botaoPagar" onClick={modal}>Pagar</button></li>
-        //         <li className="lista"><button className="botaoPagar" onClick={modal}>Pagar</button></li>
-        //         <li className="lista"><button className="botaoPagar" onClick={modal}>Pagar</button></li>
-        //         <li className="lista"><button className="botaoPagar" onClick={modal}>Pagar</button></li>
-        //       </div> );
-        // } 
-        
-        // export default Lista
-        // <div>
-        //   <h1>Listar dados</h1>
-        //   {nome.map(nomes =>(
-        //       <li key={nomes.show.id}>
-        //         <h2>
-        //           <strong>Titulos</strong>
-        //           {nomes.show.name}              
-        //         </h2>
-        //       </li>
-        //     ))}
-        // </div>
