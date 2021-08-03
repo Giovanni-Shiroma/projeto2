@@ -1,16 +1,17 @@
-/* MODAL
-
+/* MODAL */
 .modal {
     border: 1px solid black;
-    background-color: #fff;
+    background-color: white;
     width: 75vw;
-    height: 75vh;
+    height: 35vh;
     position: fixed;
     left: 12.5vw;
     top: 12.5vh;
-    display: none;
-}
+    display: flex;
+    flex-direction: column;
+} 
 
+/* FORMULARIO */
 .form {
     display: flex;
     flex-direction: column;
@@ -18,15 +19,27 @@
     align-items: center;
     width: 100%;
     height: 100%;
-} */
-/* 
-.modal{
-    background-color: white;
-    display: none;
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    left: 200px;
-    top: 40px;
-    color: black;
-} */
+} 
+
+/* CABEÇALHO MODAL */
+.headerModal {
+    background-color: rgba(57,58,94,1);
+    display: block;
+    color: white;
+    height: 6vh;
+}
+
+.headerModal span {
+    position: absolute;
+    padding: 2%;
+}
+
+/* IMPUT */
+.impt {
+    margin-bottom: 1%;
+}
+
+/* SELECT */
+.selec {
+    margin-bottom: 1%;
+}
