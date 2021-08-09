@@ -1,51 +1,147 @@
 /* FONTE PADRÃO */
 li {
-    font-size: 20px;
-    padding: 1%;
+  font-size: 18px;
+  padding: 1%;
 }
 
 /* ESTILO DA LISTA */
 .lista {
-    height: 23vh;
-    border: 1px solid black;
-    margin: -9px;
-    padding: 10px;
-    background: linear-gradient(
-        180deg
-        , rgba(57,58,94,1) 0%, rgba(40,42,63,1) 100%);
-    color: #fff;
-    list-style: none;
+  height: 23vh;
+  border: 1px solid black;
+  margin: -9px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(57, 58, 94, 1) 0%, rgba(40, 42, 63, 1) 100%);
+  color: #fff;
+  list-style: none;
 }
 
 /* BOTÃO PAGAR */
 .botaoPagar {
-    float: right;
-    margin-top: 9vh;
-    width: 8%;
+  float: right;
+  margin-top: -13vh;
+  width: 8%;
 }
 
 /* IMAGEM */
 .imgPerfil {
-    position: absolute;
-    border-radius: 90px;
-    margin-top: 2vh;
+  position: absolute;
+  border-radius: 90px;
+  margin-top: 2vh;
+  width: 15vh;;
 }
 
 /* INFORMAÇÕES DOS USUARIOS */
 .nomePerfil {
-    margin-left: 16vh;
-    position: absolute;
-    margin-top: 6vh;
+  margin-left: 21vh;
+  position: absolute;
+  margin-top: 5vh;
 }
 
 .idPerfil {
-    position: absolute;
-    margin-left: 16vh;
-    margin-top: 8vh;
+  position: absolute;
+  margin-left: 21vh;
+  margin-top: 8vh;
 }
 
 .UserPerfil {
-    position: absolute;
-    margin-left: 25vh;
-    margin-top: 8vh;
+  position: absolute;
+  margin-left: 32vh;
+  margin-top: 8vh;
+}
+
+
+/* MODAL */
+.modal {
+  border: 1px solid black;
+  background-color: white;
+  width: 50vw;
+  height: 25vh;
+  position: fixed;
+  left: 25.5vw;
+  top: 12.5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FORMULARIO */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+/* CABEÇALHO MODAL */
+.headerModal {
+  background-color: rgba(57, 58, 94, 1);
+  display: block;
+  color: white;
+  height: 6vh;
+}
+
+.headerModal span {
+  position: absolute;
+  padding: 2%;
+}
+
+/* IMPUT */
+.impt {
+  margin-bottom: 1%;
+}
+
+/* SELECT */
+.selec {
+  margin-bottom: 1%;
+}
+
+.modRecibo {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  right: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* RECIBO */
+.recibo {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #292b41;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.reciboStatus {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: #ffffff;
+  color: #292b41;
+  padding: 30px 10px;
+}
+
+.textRecibo {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(57, 58, 94, 1);;
+  color: #ffffff;
+  padding: 10px;
+}
+/* CAIXAS DE TEXTO */
+.caixas{
+  height: 25px;
+  width: 35vh;
+}
+/* BOTÃO PARA FECHAR RECIBO */
+.close {
+  text-decoration: none;
+}
+
+.close:hover {
+  cursor: pointer;
 }
